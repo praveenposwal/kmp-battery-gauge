@@ -1,18 +1,44 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# ⚡🔋 KMP Battery Gauge
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+My first **Kotlin Multiplatform (KMP)** app built with **Jetpack Compose Multiplatform**.  
+This app shows the **battery level** and **charging status** with a custom gauge UI that works on **Android, iOS, and Desktop**.
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+---
 
-### Build and Run Android Application
+## ✨ Features
+- 🔋 Cross-platform battery level detection (Android / iOS / Desktop).
+- ⚡ Charging indicator with animated lightning bolt.
+- 🎨 Custom **gauge UI**:
+  - Segmented arc with crisp spacing.
+  - Smooth color gradients (red → orange → green).
+- 100% **Kotlin Multiplatform** — shared business logic across all platforms.
+
+---
+
+## 📱 Supported Platforms
+- ✅ Android
+- ✅ iOS
+- ✅ Desktop (JVM / Compose Desktop)
+
+---
+
+## 🛠️ Tech Stack
+- [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html)
+- [Jetpack Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+- [OSHI](https://github.com/oshi/oshi) (for desktop system info)
+- Swift/Objective-C interop (for iOS system info)
+- Gradle Kotlin DSL
+
+---
+
+## 🚀 Getting Started
+
+## 1. Clone the repo
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+
+
+## Build and Run Android Application
 
 To build and run the development version of the Android app, use the run configuration from the run widget
 in your IDE’s toolbar or build it directly from the terminal:
@@ -25,7 +51,7 @@ in your IDE’s toolbar or build it directly from the terminal:
   .\gradlew.bat :composeApp:assembleDebug
   ```
 
-### Build and Run Desktop (JVM) Application
+## Build and Run Desktop (JVM) Application
 
 To build and run the development version of the desktop app, use the run configuration from the run widget
 in your IDE’s toolbar or run it directly from the terminal:
@@ -38,11 +64,18 @@ in your IDE’s toolbar or run it directly from the terminal:
   .\gradlew.bat :composeApp:run
   ```
 
-### Build and Run iOS Application
+## Build and Run iOS Application
 
 To build and run the development version of the iOS app, use the run configuration from the run widget
 in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
 
 ---
+
+## 📸 Screenshots
+
+| Android                                        | iOS                                    | Desktop                                        |
+|------------------------------------------------|----------------------------------------|------------------------------------------------|
+| ![Android Screenshot](screenshots/android.png) | ![iOS Screenshot](screenshots/ios.png) | ![Desktop Screenshot](screenshots/desktop.png) |
+
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
